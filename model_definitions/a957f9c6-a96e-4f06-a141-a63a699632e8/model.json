@@ -1,0 +1,6 @@
+{
+    "id": "a957f9c6-a96e-4f06-a141-a63a699632e8",
+    "name": "XGBoost Riesgo",
+    "description": "Modelo tipo XGBoost para estimar el Riesgo de Mora",
+    "language": "python"
+}
