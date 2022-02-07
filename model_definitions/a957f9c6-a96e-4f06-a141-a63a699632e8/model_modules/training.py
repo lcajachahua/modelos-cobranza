@@ -17,9 +17,9 @@ def train(data_conf, model_conf, **kwargs):
                    password=os.environ["AOA_CONN_PASSWORD"],
                    database=data_conf["schema"])
 
-    feature_names = ['EDUCATION_1','SEX','PAY_0','AGE','LIMIT_BAL','SUM_LPAY_REC','STD_LBILL_TOT','CV_LPAY_TOT','CV_LBILL_TOT','STD_LPAY_TOT','CANT_PAY_MAY0',
-                     'BILL_AMT1','RATE_PAY_BILL1','LOG_BILL_AMT1','SUM_LBILL_REC','AVG_LBILL_TOT','AVG_LPAY_TOT','STD_PAY_TOT']
-    target_name = 'DEFAULT'
+    feature_names = ["EDUCATION_1","SEX","PAY_1","AGE","LIMIT_BAL","SUM_LPAY_REC","STD_LBILL_TOT","CV_LPAY_TOT","CV_LBILL_TOT","STD_LPAY_TOT","CANT_PAY_MAY0",
+                     "BILL_AMT1","RATE_PAY_BILL1","LOG_BILL_AMT1","SUM_LBILL_REC","AVG_LBILL_TOT","AVG_LPAY_TOT","STD_PAY_TOT"]
+    target_name = "DEFAULT"
 
     # read training dataset from Teradata and convert to pandas
     train_df = DataFrame(data_conf["table"])
