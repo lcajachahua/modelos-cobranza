@@ -23,12 +23,12 @@ def evaluate(data_conf, model_conf, **kwargs):
     create_context(host=os.environ["AOA_CONN_HOST"],
                    username=os.environ["AOA_CONN_USERNAME"],
                    password=os.environ["AOA_CONN_PASSWORD"],
-                   database=data_conf["schema"] if "schema" in data_conf and data_conf["schema"] != "" else None)
+                   database="AOA_MASTER")
 
     # Read test dataset from Teradata
     # As this is for demo purposes, we simulate the test dataset changing between executions
     # by introducing a random sample. Note that the sampling is performed in Teradata!
-    test_df = DataFrame(data_conf["table"]).sample(frac=0.8)
+    test_df = DataFrame("ACC_TEST")
     test_df = test_df.to_pandas()
 
     X_test = test_df[model.feature_names]
