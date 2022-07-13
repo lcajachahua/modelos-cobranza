@@ -13,9 +13,9 @@ def score(data_conf, model_conf, **kwargs):
     create_context(host=os.environ["AOA_CONN_HOST"],
                    username=os.environ["AOA_CONN_USERNAME"],
                    password=os.environ["AOA_CONN_PASSWORD"],
-                   database=data_conf["schema"] if "schema" in data_conf and data_conf["schema"] != "" else None)
+                   database="AOA_MASTER")
 
-    predict_df = DataFrame(data_conf["table"])
+    predict_df = DataFrame("ACC_TRAIN").sample(frac=0.8)
 
     # convert to pandas to use locally
     predict_df = predict_df.to_pandas()
