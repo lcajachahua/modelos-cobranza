@@ -27,8 +27,8 @@ def score(data_conf, model_conf, **kwargs):
 
     # create result dataframe and store in Teradata
     y_pred = pd.DataFrame(y_pred, columns=["pred"])
-    y_pred["PatientId"] = predict_df["PatientId"].values
-    copy_to_sql(df=y_pred, table_name=data_conf["predictions"], index=False, if_exists="replace")
+    y_pred["Id"] = predict_df["Id"].values
+    copy_to_sql(df=y_pred, table_name="ACC_PREDICTIONS", index=False, if_exists="replace")
 
 
 # Add code required for RESTful API
