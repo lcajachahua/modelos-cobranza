@@ -1,0 +1,7 @@
+{
+    "id": "bb060026-bf6e-4034-8eaf-e6989d4264bf",
+    "name": "AdaBoost Risk",
+    "description": "A different Model to estimate the default probability",
+    "language": "python",
+    "source_model_id": "a957f9c6-a96e-4f06-a141-a63a699632e8"
+}
