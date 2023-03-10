@@ -5,6 +5,7 @@ scikit-learn>=0.22.2
 matplotlib>=2.2.2
 xlrd>=1.2.0
 shap==0.36.0
-teradataml>=17.0.0.4
-nyoka>=4.3.0
-aoa>=4.1.4
+teradataml==17.10.0.1
+nyoka==4.3.0
+aoa==7.0.0.0rc1
+SQLAlchemy==1.4.46
