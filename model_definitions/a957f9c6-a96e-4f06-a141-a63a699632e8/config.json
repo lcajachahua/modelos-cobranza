@@ -1,7 +1,7 @@
 {
   "hyperParameters": {
-    "eta": 0.003,
-    "max_depth": 6,
-    "n_estimators": 100
+    "eta": 0.01,
+    "max_depth": 5,
+    "n_estimators": 150
   }
 }
