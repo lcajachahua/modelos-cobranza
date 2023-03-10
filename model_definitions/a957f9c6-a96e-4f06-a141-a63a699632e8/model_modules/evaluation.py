@@ -47,9 +47,4 @@ def evaluate(data_conf, model_conf, **kwargs):
     with open("artifacts/output/metrics.json", "w+") as f:
         json.dump(evaluation, f)
 
-    metrics.plot_confusion_matrix(model, X_test, y_test)
-    save_plot('Confusion Matrix')
-
-    metrics.plot_roc_curve(model, X_test, y_test)
-    save_plot('ROC Curve')
 
